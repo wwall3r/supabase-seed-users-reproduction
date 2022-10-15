@@ -3,7 +3,7 @@
 import { supabase } from './db.js';
 import { credentials } from './creds.js';
 
-const { data: user, error } = await supabase.auth.signUp(credentials);
+const { user, error } = await supabase.auth.signUp(credentials);
 
 if (error) {
 	console.error(error);
